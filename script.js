@@ -1,13 +1,11 @@
 const input = document.getElementById('search')
-const url = 'https://api.logcomex.com.br/v2/get_conteiner_tracking?api_key=2a7959e9189097e782738190d910abad&conteiner='
-// const url = 'https://comex.io/v1/conteiner/tracking?api_key=2a7959e9189097e782738190d910abad&conteiner='
+const url = 'https://api.logcomex.com.br/v2/get_conteiner_tracking?api_key=CHAVE&conteiner='
+// const url = 'https://comex.io/v1/conteiner/tracking?api_key=&conteiner='
 const tabelaDados = document.getElementById('datas')
 const tableHeader = document.getElementById('table-head')
 const tableBody = document.getElementById('tbody')
 const divDatas = document.getElementById('datas')
-let datasJson 
-
-// PCIU9294631
+let datasJson
 
 async function buscarDados() {
     let buscar = await fetch(url + input.value, { method: 'GET' })
@@ -26,3 +24,4 @@ async function buscarDados() {
         columns: datas
     })
 }
+
